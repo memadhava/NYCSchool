@@ -26,12 +26,14 @@
 
 ## 📸 Screenshots
 
-> _(Pending)_
+<img width="568" alt="ListView" src="https://github.com/user-attachments/assets/d669d644-2a0f-499d-8079-2f15d8a2e9bb" />
 
-<!--
-![List View](Screenshots/list.png)
-![Detail View](Screenshots/detail.png)
--->
+
+<img width="568" alt="DetailView1" src="https://github.com/user-attachments/assets/605d7074-c538-4acd-b6bf-185ab8134f3b" />
+
+<img width="568" alt="DetailView2" src="https://github.com/user-attachments/assets/b57b14e1-56ab-4822-bfb2-5d578c5899f0" />
+
+
 
 ---
 
