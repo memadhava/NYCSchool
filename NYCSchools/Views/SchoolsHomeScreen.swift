@@ -25,12 +25,18 @@ struct SchoolsHomeScreen: View {
                         
                         NavigationLink(destination: SchoolDetailsView(school: school)) {
                             VStack(alignment: .leading) {
-                                Text("\(school.school_name)")
+                                Text(school.school_name)
                                     .font(.title)
                                     .bold()
                                     .bold()
-                                Text("\(school.location)")
-                                    .font(.subheadline)
+                                if let address = school.location.components(separatedBy: "(").first {
+                                    Text(address)
+                                        .font(.subheadline)
+                                } else {
+                                    Text(school.location)
+                                        .font(.subheadline)
+                                }
+                                
                             }
                             .padding(.vertical, 4)
                         }

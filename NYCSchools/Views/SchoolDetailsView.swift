@@ -31,7 +31,7 @@ struct SchoolDetailsView: View {
             Section("Location") {
                 
                 if let lat = Double(school.latitude ?? "0.0"), let lan = Double(school.longitude ?? "0.0") {
-                    schoolMap(longitute: lan, latitude: lat)
+                    schoolMap(longitude: lan, latitude: lat)
                         .frame(height: 200)
                         .listRowInsets(.init(.zero))
                 } else {
@@ -49,22 +49,22 @@ struct SchoolDetailsView: View {
 }
 
 struct schoolMap: View {
-    let longitute: Double
+    let longitude: Double
     let latitude: Double
     
     //@State private var region: MKCoordinateRegion
     @State private var position: MapCameraPosition
     
-    init(longitute: Double, latitude: Double) {
-        self.longitute = longitute
+    init(longitude: Double, latitude: Double) {
+        self.longitude = longitude
         self.latitude = latitude
-        let center = CLLocationCoordinate2D(latitude: latitude, longitude: longitute)
-        _position = State(initialValue: .region(MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))))
+        let center = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        self.position = .region(MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)))
     }
     
     var body: some View {
         Map(position: $position) {
-            let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitute)
+            let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             Marker("Location", coordinate: location)
         }
     }
