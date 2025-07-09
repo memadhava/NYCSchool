@@ -1,3 +1,5 @@
+⚠️ Note: This is a work-in-progress development branch. Some features may be incomplete or under refinement. Please refer to the README for feature highlights and instructions.
+
 # 🏫 NYCSchool
 
 **NYCSchool** is an iOS app built using SwiftUI and modern Swift Concurrency (async/await). It fetches and displays a list of New York City public schools along with their SAT scores, using data provided by the NYC Open Data platform.
